@@ -4,11 +4,11 @@ import processing.data.TableRow;
 
 public class Colour
 {
-    private String colours;
+    private String colour;
     public float r, g, b, value;
 
     public Colour(TableRow row)
-    {   this.colours = row.getString("colour");
+    {   this.colour = row.getString("colour");
         this.r = row.getFloat("r");
         this.g = row.getFloat("g");
         this.b = row.getFloat("b");
@@ -16,21 +16,21 @@ public class Colour
     }
     public String toString()
     {
-        return colours + "\t" + value; 
+        return colour + "\t" + value; 
     }
 
     /**
      * @return the colour
      */
     public String getColour() {
-        return colours;
+        return colour;
     }
 
     /**
      * @param colour the colour to set
      */
     public void setColour(String colour) {
-        this.colours = colour;
+        this.colour = colour;
     }
 
     /**
