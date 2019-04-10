@@ -10,13 +10,30 @@ public class UI extends PApplet
 
 {	
 	ArrayList<Colour> colours = new ArrayList<Colour>();
+
 	public void loadColours(){
-        Table table = loadTable("colors.csv","header");
+        Table table = loadTable("colours.csv","header");
         
         for (TableRow row: table.rows()){ //adding c into array list
             Colour c = new Colour(row);
             colours.add(c);
         }
+	}
+
+	public void printColours()
+	{
+		for(Colour c : colours)
+        {
+            System.out.println(c);
+        }
+	}
+
+	 public void findColor(int value)
+	 {
+	 	
+	 }
+	public void resistor(){
+
 	}
 	
 	public void separate(int value)
@@ -40,9 +57,12 @@ public class UI extends PApplet
 
 	public void setup() 
 	{
+		loadColours();
+		printColours();
 	}
 	
 	public void draw()
 	{			
+
 	}
 }
