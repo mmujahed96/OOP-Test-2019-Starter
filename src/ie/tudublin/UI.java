@@ -9,7 +9,15 @@ import processing.data.TableRow;
 public class UI extends PApplet
 
 {	
-	ArrayList<Colour> colour = new ArrayList<Colour>();
+	ArrayList<Colour> colours = new ArrayList<Colour>();
+	public void loadColours(){
+        Table table = loadTable("colors.csv","header");
+        
+        for (TableRow row: table.rows()){ //adding c into array list
+            Colour c = new Colour(row);
+            colours.add(c);
+        }
+	}
 	
 	public void separate(int value)
 	{
